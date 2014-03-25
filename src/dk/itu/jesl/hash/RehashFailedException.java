@@ -5,6 +5,8 @@ package dk.itu.jesl.hash;
  * e.g., after trying a large number of generated hash function pairs for cuckoo
  * hashing. This typically means that the provided hash function generator is
  * flawed or misused.
+ *
+ * @author Jesper Larsson <jesl@avadeaux.net>
  */
 public class RehashFailedException extends RuntimeException {
     /** 

@@ -7,6 +7,8 @@ import java.util.*;
  * values. Since keys are not objects, this class does not implement the {@link
  * Map} interface, but it provides generic map views that do, via {@link
  * #genericMap(LongidFunction idf)} and {@link #genericMap()}
+ *
+ * @author Jesper Larsson <jesl@avadeaux.net>
  */
 public final class CuckooLongKeyHashMap<V> {
     private final LongHasher.Factory hfact;

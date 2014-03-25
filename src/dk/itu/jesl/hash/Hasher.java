@@ -5,6 +5,8 @@ package dk.itu.jesl.hash;
  * functions.
  *
  * @see LongHasher
+ *
+ * @author Jesper Larsson <jesl@avadeaux.net>
  */
 public interface Hasher<K> {
     /**

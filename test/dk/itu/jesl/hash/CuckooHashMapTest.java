@@ -5,6 +5,9 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
+/**
+ * @author Jesper Larsson <jesl@avadeaux.net>
+ */
 public class CuckooHashMapTest {
     private static class DebugKey {
         final int[] v;

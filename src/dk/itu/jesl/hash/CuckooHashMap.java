@@ -6,6 +6,8 @@ import java.util.*;
  * Cuckoo hashing implemented in a conventional way, using an array of Map.Entry
  * objects. Capable of handling any kind of objects as keys, provided that an
  * appropriate Hasher is provided.
+ *
+ * @author Jesper Larsson <jesl@avadeaux.net>
  */
 public final class CuckooHashMap<K, V> extends AbstractMap<K, V> {
     private final static class Entry<K, V> implements Map.Entry<K, V> {

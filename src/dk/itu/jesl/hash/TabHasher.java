@@ -6,6 +6,8 @@ import java.util.Random;
  * Support for tabular hash functions. This class does not implement {@link
  * Hasher}, but rather is used to create one. It contains methods to create
  * {@link Hasher.Factory}s for some fixed key classes.
+ *
+ * @author Jesper Larsson <jesl@avadeaux.net>
  */
 public final class TabHasher {
     /**
