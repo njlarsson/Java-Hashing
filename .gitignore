@@ -11,3 +11,6 @@
 
 # Don't version-control javadoc for now
 api
+
+# Libraries
+junit.jar
