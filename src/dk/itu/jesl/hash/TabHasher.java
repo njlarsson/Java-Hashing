@@ -21,7 +21,7 @@ public final class TabHasher {
     private final int keyBytes;
     private final int[] tab;
 
-    TabHasher(int keyBytes) {
+    public TabHasher(int keyBytes) {
         this.keyBytes = keyBytes;
         tab = new int[256*keyBytes];
         Random rand = new Random();
@@ -77,6 +77,20 @@ public final class TabHasher {
         h ^= tab[5*256 + (((int) (key >>>= 8)) & 255)];
         h ^= tab[6*256 + (((int) (key >>>= 8)) & 255)];
         h ^= tab[7*256 + (((int) (key >>>= 8)) & 255)];
+        return h;
+    }
+
+    /**
+     * Gets hash code for a key composed of a combination of two
+     * ints. the iBytes least significant bytes of i and the
+     * (keyBytes-iBytes) least significant bytes of j.
+     */
+    public int combinedIntHashCode(int iBytes, int i, int j) {
+        int off = 0, k = 1;
+        int                     h =  tab[               ((i)        & 255)];
+        while (k++ < iBytes)    h ^= tab[(off += 256) + ((i >>>= 8) & 255)];
+                                h ^= tab[(off += 256) + ((j)        & 255)];
+        while (++k < keyBytes) h ^= tab[(off += 256) + ((j >>>= 8) & 255)];
         return h;
     }
 

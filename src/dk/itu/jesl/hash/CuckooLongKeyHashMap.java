@@ -271,7 +271,7 @@ public final class CuckooLongKeyHashMap<V> {
         @SuppressWarnings("unchecked")
         public V get(Object key) { return get(idf.toLong((K) key)); }
 
-        public V put(K key, V value) { return put(idf.toLong(key), value); }
+        public V put(K key, V value) { return CuckooLongKeyHashMap.this.put(idf.toLong(key), value); }
 
         @SuppressWarnings("unchecked")
         public V remove(Object key) { return remove(idf.toLong((K) key)); }
